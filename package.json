@@ -1,0 +1,37 @@
+{
+  "name": "express-brologger",
+  "version": "0.0.4",
+  "description": "",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "build": "rimraf build && tsc -p tsconfig.build.json",
+    "start": "ts-node-dev -r tsconfig-paths/register src/index.ts",
+    "test": "mocha test/**/*.ts --full-stack"
+  },
+  "author": "",
+  "license": "ISC",
+  "deepDependencies": {
+    "brologger": "^0.1.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.4",
+    "@types/express": "^4.17.2",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.3",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2",
+    "rimraf": "^3.0.0",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2",
+    "ts-mocha": "^6.0.0",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.6.4"
+  },
+  "keywords": [
+    "log",
+    "logger"
+  ]
+}
