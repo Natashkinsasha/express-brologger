@@ -13,14 +13,50 @@ describe('#Logger', () => {
     before(() => {
         app = express();
         app.use(logger({loggerInstance: new Logger()}));
-        app.get('/', (req, res, next) =>{
+        app.get('/201', (req, res, next) =>{
             return res.sendStatus(201);
-        })
+        });
+        app.get('/200', (req, res, next) =>{
+            return res.sendStatus(200);
+        });
+        app.get('/400', (req, res, next) =>{
+            return res.sendStatus(400);
+        });
+        app.get('/500', (req, res, next) =>{
+            return res.sendStatus(500);
+        });
     });
 
-    it('1', (done)=>{
+    it('200', (done)=>{
         supertest(app)
-            .get('/')
+            .get('/200')
+            .then((res: supertest.Response)=>{
+                done();
+            })
+            .catch(done);
+
+    });
+    it('201', (done)=>{
+        supertest(app)
+            .get('/201')
+            .then((res: supertest.Response)=>{
+                done();
+            })
+            .catch(done);
+
+    });
+    it('400', (done)=>{
+        supertest(app)
+            .get('/400')
+            .then((res: supertest.Response)=>{
+                done();
+            })
+            .catch(done);
+
+    });
+    it('500', (done)=>{
+        supertest(app)
+            .get('/500')
             .then((res: supertest.Response)=>{
                 done();
             })
