@@ -1,6 +1,6 @@
 {
   "name": "express-brologger",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "deepDependencies": {
-    "brologger": "^0.1.1",
+    "brologger": "^0.2.0",
     "express": "^4.17.1"
   },
   "devDependencies": {

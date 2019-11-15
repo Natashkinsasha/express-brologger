@@ -1,5 +1,5 @@
 import * as express from 'express';
-import {Logger} from 'brologger';
+import Logger from 'brologger';
 
 
 export default ({loggerInstance, getLogInfo}: { loggerInstance: Logger, getLogInfo?: (req: express.Request, res: express.Response & { body: any }) => { message?: string, object?: object, meta?: object } }) => (req: express.Request, res: express.Response & { body: any }, next: express.NextFunction) => {

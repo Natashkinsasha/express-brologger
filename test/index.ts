@@ -1,7 +1,7 @@
 import * as chai from 'chai';
 import * as supertest from 'supertest'
 import * as express from 'express';
-import {Logger} from 'brologger';
+import Logger from 'brologger';
 import logger from '../src/index'
 
 describe('#Logger', () => {
